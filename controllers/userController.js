@@ -3,5 +3,8 @@ exports.registerUser = (req, res) => {
 };
 
 exports.getUserById = (req, res) => {
-  res.status(200).json({ status: "success", message: "User fetched" });
+  res.status(200).json({
+    status: "success",
+    message: `User with id ${req.params.id} fetched`,
+  });
 };

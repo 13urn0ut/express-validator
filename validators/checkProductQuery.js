@@ -9,12 +9,14 @@ const checkProductQuery = [
       allow_zero: false,
       digits_after_decimal: [0, 1, 2],
     })
-    .withMessage("Must be a positive number with up to 2 decimal places."),
+    .withMessage(
+      "Price must be a positive number with up to 2 decimal places."
+    ),
 
   query("category")
     .trim()
     .notEmpty()
-    .withMessage("Must be a non-empty string."),
+    .withMessage("Catgory must be a non-empty string."),
 ];
 
 module.exports = checkProductQuery;
