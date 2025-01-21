@@ -8,9 +8,4 @@ export default [
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
-  {
-    rules: {
-      linebreakStyle: ["error", "windows" | "unix"],
-    },
-  },
 ];
