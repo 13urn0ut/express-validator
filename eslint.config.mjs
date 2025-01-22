@@ -10,7 +10,14 @@ export default [
   eslintPluginPrettierRecommended,
   {
     rules: {
-      linebreakStyle: ["error", "windows" | "unix"],
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "auto",
+          trailingComma: "es5",
+        },
+      ],
+      "no-unused-vars": ["warn", { argsIgnorePattern: "req|res|next" }],
     },
   },
 ];
